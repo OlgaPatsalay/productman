@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600i,900|Roboto:300,400,700,900');
+
+body {
+    color: #303030;
+    background-color: #EAD0D0;
+}
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+.logo {
+    font: 900 48px  Roboto, sans-serif; /*black*/
+    float: left;
+}
+header, .slider-nav, main, footer {
+    width: 75%;
+    max-width: 1500px;
+    margin: 38px auto;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+header nav ul li {
+     display: inline-block;
+     margin: 0 0 0 30px;
+}
+nav ul {
+     float: right;
+     font: 400 18px Roboto, sans-serif;
+     padding-top: 23px;
+}
+h2 {
+    font: 900 150px Raleway, sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 3px;
+}
+footer {
+    margin-top: 70px;
+}
+.slider a {
+    color: #e10011;
+    font: 700 24px Roboto, sans-serif;
+    text-decoration: none;
+}
+.clear {
+     clear: both
+}
+.slider-left {
+     float: left;
+     width: 55%;
+     text-align: right;
+     padding-right: 16px;
+     min-width: 620px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+ .slider p {
+     font: 300 24px Roboto, sans-serif;
+ }
+.slider-nav span {
+    display: inline-block;
+    height: 10px;
+    width:10px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 100px auto;
+}
+.slider {
+    padding-top: 55px;
+}
+.product-categories {
+    background-color: #fff;
+}
+.product-categories h3, footer h3 {
+    font: 900 48px Raleway, sans-serif;
+}
+.copyright {
+    color: #979797;
+}
+.product-categories p,
+footer p, .your_company {
+    font: 400 18px Raleway, sans-serif;
+    width: 570px;
+    margin:  20px auto 78px auto;
+    line-height: 24px;
+    color: #303030;
+}
+.product-categories li {
+    display: inline-block;
+    margin: 0 17px 40px 17px;
+    border-radius: 8px;
+    position: relative;
+}
+.product-categories {
+    padding: 52px 0 30px 0;
+}
+input[type="text"] {
+    width: 490px;
+    height: 70px;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    padding-left: 35px;
+}
+
+::-webkit-input-placeholder {font-weight: 900;}
+::-moz-placeholder          {font-weight: 900;}/* Firefox 19+ */
+:-moz-placeholder           {font-weight: 900;}/* Firefox 18- */
+:-ms-input-placeholder      {font-weight: 900;}
+
+input[type="button"] {
+    height: 70px;
+    width: 210px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #e10011;
+    color: #ffffff;
+    font: 900 18px Roboto, sans-serif;
+    text-transform: uppercase;
+}
+
+input[type="text"], input[type="button"],
+input:focus, input:target {
+    border: none;
+    outline: none;
+}
+.product-list {
+    font-size: 0;
+}
+.item {
+    float: left;
+}
+.item div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.item a {
+    text-align: left;
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    color: #fff;
+    font: 900 30px Roboto, sans-serif;
+    padding: 40px;
+    opacity: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.item:hover a {
+    opacity: 1;
+}
+.item a span span {
+    border-bottom: 7px solid #fff;
+}
+footer form {
+    min-width: 737px;
+}
+.social a {
+    font-size: 34px;
+    font-family: FontAwesome, sans-serif;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 100px auto;
+    line-height: 80px;
+}
+.clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block; /* сделать блоком, т.к. inline не может иметь clear */
+    height: 0;  /* сделать высоту 0, чтобы не занимал место */
+    clear: both; /* с обеих сторон clear */
+}
+a {
+    transition: all .3s ease-in;
+}
+.product-name {
+    position: absolute;
+    bottom: 40px;
+}
