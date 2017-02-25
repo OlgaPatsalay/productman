@@ -265,7 +265,11 @@ a, li:before, li:after, i {
         }
     nav ul, .logo {
         float: none;
-
-
+    }
+    .menu-list {
+        margin-left: 5px;
+    }
+    .social a {
+        margin: 15px;
     }
 }
