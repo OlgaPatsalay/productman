@@ -254,4 +254,7 @@ a, li:before, li:after, i {
     h3 {
         font-size: 30px;
     }
+    .slider-left {
+        min-width: 320px;
+    }
 }
