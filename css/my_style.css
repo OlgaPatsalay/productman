@@ -23,9 +23,37 @@ ul {
     padding: 0;
     margin: 0;
 }
-header nav ul li {
-     display: inline-block;
-     margin: 0 0 0 30px;
+.menu-list {
+    display: inline-block;
+    margin: 0 0 0 30px;
+    cursor: pointer;
+    position: relative;
+}
+.menu-list:before {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: #303030;
+}
+.menu-list:hover:before {
+    width: 50%;
+}
+.menu-list:after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    right: 50%;
+    background-color: #303030;
+}
+.menu-list:hover:after {
+    width: 50%;
 }
 nav ul {
      float: right;
@@ -86,7 +114,7 @@ footer {
 .product-categories p,
 footer p, .your_company {
     font: 400 18px Raleway, sans-serif;
-    width: 570px;
+    max-width: 570px;
     margin:  20px auto 78px auto;
     line-height: 24px;
     color: #303030;
@@ -101,36 +129,56 @@ footer p, .your_company {
     padding: 52px 0 30px 0;
 }
 input[type="text"] {
-    width: 490px;
-    height: 70px;
+    width: 70%;
+    height: 72px;
     border-bottom-left-radius: 35px;
     border-top-left-radius: 35px;
     padding-left: 35px;
 }
+input[type="text"], .subscribe-btn,
+input:focus, input:target {
+    border: none;
+    outline: none;
 
+}
+input, button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
 ::-webkit-input-placeholder {font-weight: 900;}
 ::-moz-placeholder          {font-weight: 900;}/* Firefox 19+ */
 :-moz-placeholder           {font-weight: 900;}/* Firefox 18- */
 :-ms-input-placeholder      {font-weight: 900;}
 
-input[type="button"] {
-    height: 70px;
-    width: 210px;
+.subscribe-btn {
+    font-family: Roboto, FontAwesome, sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    height: 72px;
+    width: 28%;
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
     background-color: #e10011;
     color: #ffffff;
-    font: 900 18px Roboto, sans-serif;
     text-transform: uppercase;
+    text-align: left;
+    padding-left: 45px;
+    vertical-align: bottom;
 }
-
-input[type="text"], input[type="button"],
-input:focus, input:target {
-    border: none;
-    outline: none;
+.subscribe-btn:active {
+    background-color: #8e0b0b;
+}
+.subscribe-btn:hover i {
+    margin-left: 5px;
 }
 .product-list {
     font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
 }
 .item {
     float: left;
@@ -161,8 +209,10 @@ input:focus, input:target {
 .item a span span {
     border-bottom: 7px solid #fff;
 }
-footer form {
-    min-width: 737px;
+.form-subscribe {
+    max-width: 737px;
+    margin: auto;
+    text-align: center;
 }
 .social a {
     font-size: 34px;
@@ -182,10 +232,26 @@ footer form {
     height: 0;  /* сделать высоту 0, чтобы не занимал место */
     clear: both; /* с обеих сторон clear */
 }
-a {
+a, li:before, li:after, i {
     transition: all .3s ease-in;
 }
 .product-name {
     position: absolute;
     bottom: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    header, .slider-nav, main, footer {
+        width: 95%;
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 660px) {
+    h2, .logo {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 30px;
+    }
 }
